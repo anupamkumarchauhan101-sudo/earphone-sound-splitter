@@ -52,8 +52,12 @@ class SplitterEngine:
             sd.OutputStream(device=self.out_dev, channels=2,
                             callback=self._output_callback, **common),
         ]
-        for s in self._streams:
+        try:
+          for s in self._streams:
             s.start()
+        except Exception:
+            self.stop()
+            raise
 
     def stop(self):
         for s in self._streams:
