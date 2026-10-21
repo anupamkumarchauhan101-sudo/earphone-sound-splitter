@@ -1,0 +1,18 @@
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+splitter/__pycache__/engine.cpython-310.pyc
+
+# Virtual environment
+.venv/
+
+# PyInstaller output
+build/
+dist/
+*.spec
+
+# Executables
+*.exe
+
